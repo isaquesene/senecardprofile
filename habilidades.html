@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("Dr27KtkUmqyuupc0A");
+   })();
+</script>
+
+</head>
+<body>
+    <div class="card">
+        
+        <div class="content">
+            <div class="detalhes">
+                <h2>Isaque Sene <br><span>Web Developer UX/UI Designer</span></h2>
+                <div id="skills" class="skills">
+                    <div class="text"></div>
+                    <p><span></span></p>
+                    <div class="exp_bd">
+                        <div class="box">
+                            <div class="c1">Figma</div>
+                            <div class="progress figma"></div>
+                        </div>
+                        <div class="percent">70%</div>
+                    </div>
+                    <div class="exp_bd">
+                        <div class="box">
+                            <div class="c1">CSS</div>
+                            <div class="progress css3"></div>
+                        </div>
+                        <div class="percent">80%</div>
+                    </div>
+                    <div class="exp_bd">
+                        <div class="box">
+                            <div class="c1">JavaScript</div>
+                            <div class="progress js"></div>
+                        </div>
+                        <div class="percent">50%</div>
+                    </div>
+                    <div class="exp_bd">
+                        <div class="box">
+                            <div class="c1">php</div>
+                            <div class="progress php"></div>
+                       
+                        </div>
+                        <div class="percent">60%</div>
+                    </div>
+                </div>
+
+
+                <div id="contatos" class="contatos">
+                    <div class="text"></div>
+                    <div class="midia">
+                    <a href="https://api.whatsapp.com/send?phone=5512981424113&text=Como+podemos+Ajudar?"><i class="fa-brands fa-whatsapp"><h3>(12)982424113</h3></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?i=1au84oo1i240&utm_content=pv5h6aq"><i class="fa-brands fa-instagram"><h3>@sene</h3></i></a>
+                    <a href="https://www.youtube.com/channel/UCqX6KO7Rut0WtqwFTQFZYjA"><i class="fa-brands fa-youtube"><h3>Codando Sene</h3></i></a>
+                    <a href="https://www.linkedin.com/in/isaque-luis-sene-1532a3194/"><i class="fa-brands fa-linkedin"><h3>Isaque Sene</h3></i></a>
+                    <a href="https://github.com/isaquesene"><i class="fa-brands fa-github"><h3>@Senes</h3></i></a>
+                    </div>
+                </div>
+
+
+                <div id="help" class="help">
+                    <div class="form">
+                        <form>
+                            <h3>How Can I Help?</h3>
+                            <input type="email" placeholder="E-mail" id="email">
+                            <input type="tel" placeholder="Phone" id="phone">
+                            <textarea placeholder="How can we help you?" id="message" cols="22" rows="3"></textarea>
+                            <a href=""><button onclick="sendEmail(); reset(); return false;">Enviar</button></a> 
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="tab">
+                    <div id="tab1" class="tabs skills_tab">Skills</div>
+                    <div id="tab2" class="tabs contat_tab">Contact</div>
+                    <div id="tab3" class="tabs help_tab">Help?</div>
+                </div>
+
+
+                <div class="hab">
+                    <a href="Projetos.html"><i class="fa-sharp fa-solid fa-angles-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/email.js"></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,500&family=Red+Hat+Text:ital@1&family=Snippet&family=Sofia&family=Ubuntu:wght@300&display=swap');
+
+
+*
+{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+}
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition:  0.5s ease;
+}
+
+.card:hover{
+    height: 450px;
+}
+
+.imgBx{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.6s ease;
+}
+
+.card:hover .imgBx{
+    width: 200px;
+    height: 200px;
+}
+
+.imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card .content .detalhes{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition:  0.5s ease;
+}
+
+.card .content .detalhes h2{
+    font-size: 1.30rem;
+    font-weight: 700;
+    color: #555;
+    line-height: 1.2rem;
+}
+
+.card .content .detalhes h2 span{
+    font-size: 0.75rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.card .content .detalhes .data{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+
+.card .content .detalhes .data h3{
+    margin: 5 auto;
+    position: relative;
+    font-size: 0.8rem;
+    color: #555;
+    line-height: 1.2rem;
+    font-weight: 600;
+
+}
+
+.card .content .detalhes .data h3 span{
+    margin: 5 auto;
+    position: relative;
+    font-size:  0.85rem;    
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+
+/*--------------Skills---------------*/
+
+.card .content .skills .exp_bd{
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card .content .skills .exp_bd .box{
+    width: 100%;
+}
+
+.card .content .skills .exp_bd .box .c1{
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.card .content .skills .exp_bd .box .progress{
+    width: 100%;
+    height: 10px;
+    background: #bfbfbf;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card .content .skills .exp_bd .box .progress::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+    border-radius: 20px;
+}
+
+.card .content .skills .exp_bd .box .progress.php::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 10px;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+    border-radius: 20px;
+}
+
+.card .content .skills .exp_bd .box .progress.figma::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 10px;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+    border-radius: 20px;
+}
+
+.card .content .skills .exp_bd .box .progress.css3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+    border-radius: 20px;
+}
+
+.card .content .skills .exp_bd .box .progress.js::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 10px;
+    background: linear-gradient(120deg, #6d5be0 0%, #2d2c3a 100%);
+    border-radius: 20px;
+}
+
+.card .content .skills .exp_bd .percent{
+    font-weight: 500;
+}
+
+.card .content .skills{
+    display: none;
+}
+
+.card .content .tab{
+    position: relative;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .content .tab .tabs{
+    margin-right: 50px auto;
+    font-size: 10px;
+    font-weight:  500;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+}
+
+.card .content .tab .tabs::before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #6d5be0;
+    border-radius: 20px;
+}
+
+
+.card .content .tab .tabs:hover::before{
+    animation: draw .5s linear;
+}
+
+@keyframes draw{
+    0%{
+
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+
+.card .content .skills.active{
+    display: block;
+}
+
+
+
+/*-----------------contatos---------------*/
+
+.card .content .contatos{
+    font-size: 0.8rem;
+    display: flex;
+    margin-top: 20px;
+}
+
+.card .content .contatos .midia i{
+    font-size: 1.5rem;
+    color: #6d5be0;
+    padding: 0.7px 0.5px;
+    margin: 8px 10px;
+}
+
+
+.card .content .contatos .midia h3{
+    color: black;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.card .content .contatos .text{
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin-top: 10px;
+}
+
+.card .content .contatos{
+    display: none;
+}
+
+.card .content .contatos.active{
+    display: block;
+}
+
+
+/*---------help-----------*/
+.card .content .help{
+    display: none;
+}
+
+.card .content .help.active{
+    display: block;
+}
+
+.card .content .help{
+    margin-bottom: -30px;
+}
+
+.card .content .help .form input{
+    font-size: 0.7rem;
+    border-radius: 10px;
+    border-color:#6d5be0;
+    background: white;
+    outline: none;
+    padding: 6px 30px;
+    font-family: 'Popps', sans-serif;
+    margin: 3px;
+}
+
+.card .content .help .form textarea{
+    font-size: 0.7rem;
+    border-radius: 10px;
+    border-color:#6d5be0;
+    background: white;
+    outline: none;
+    padding: 6px 30px;
+    font-family: 'Popps', sans-serif;
+}
+.card .content .help .form h3{
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.card .content .help .form button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.6s ease;
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.card .content .help .form button:hover{
+    box-shadow: #000000 0 10px 20px -10px;
+}
+
+
+/*----------------tab alinhado---------*/
+
+.card .content .detalhes .tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .content .detalhes .tab .tabs{
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+
+/*-------------ICONS------------------------*/
+.card .content .detalhes .data h3 i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+}
+
+.card .content .detalhes .data .css i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+    animation: color1 4s ease infinite;
+    cursor: pointer;
+}
+
+
+/*------------proj-------------*/
+.card .content .detalhes .proj h2{
+    font-size: 1.5rem;
+    margin: 15px;
+    animation: colorp 5s linear infinite;
+    
+}
+
+@keyframes colorp{
+    0%{
+        color: #123a4e;
+    }
+    25%{
+        color: #1a709b;
+    }
+    50%{
+        color: #3d98c5;
+    }
+    100%{
+        color: #123a4e;
+    }
+}
+
+
+
+.card .content .detalhes .proj h3{
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.card .content .detalhes .proj p{
+    font-size: 0.7rem;
+    margin: 7px;
+}
+
+.card .content .detalhes .proj .btn{
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background:linear-gradient(120deg, #6d5be0 0%, #413e57 100%);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s ease;
+    margin: 8px;
+}
+
+
+.card .content .detalhes .proj .btn:hover{
+    box-shadow: #000000 0 10px 20px -10px;
+}
+
+
+
+.card .content .detalhes .data .php i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+    animation: color1 4s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes color1{
+    0%{
+        color: #123a4e;
+    }
+    25%{
+        color: #1a709b;
+    }
+    50%{
+        color: #3d98c5;
+    }
+    100%{
+        color: #123a4e;
+    }
+}
+
+.card .content .detalhes .data .js i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+    animation: color1 4s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes color1{
+    0%{
+        color: #123a4e;
+    }
+    25%{
+        color: #1a709b;
+    }
+    50%{
+        color: #3d98c5;
+    }
+    100%{
+        color: #123a4e;
+    }
+}
+
+
+.card .content .detalhes .data .figma i{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+    animation: color1 4s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes color1{
+    0%{
+        color: #123a4e;
+    }
+    25%{
+        color: #1a709b;
+    }
+    50%{
+        color: #3d98c5;
+    }
+    100%{
+        color: #123a4e;
+    }
+}
+
+.card .content .detalhes .hab i{
+    margin: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #123a4e;
+}
+.card .content .detalhes .hab i:hover{
+    margin: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1d668a;
+}
+
+
+.card .content .detalhes .acaobtn{
+    display: flex;
+    justify-content: space-between;
+    /*gap: 20px;*/
+}
+
+
+.card .content .detalhes .acaobtn .proj{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    background:linear-gradient(120deg, #6d5be0 0%, #413e57 100%);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.card .content  .detalhes .acaobtn button:hover{
+    box-shadow: #000000 0 10px 20px -10px;
+}
+
+.card .content .detalhes .acaobtn .msg{
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.6s ease;
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+
+.card{
+    animation: move 1s;
+}
+
+@keyframes move{
+    from{
+        opacity: 0;
+        transform: translateX(-35%);
+    }to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+/* Pagina em Responsivo */
+
+
+@media (max-width:1200px){
+
+    section{
+        font-size: 50%;
+    }
+
+    h3{
+        font-size: 3.5rem;
+
+    }
+
+    .card .content .detalhes{
+        font-size: 50%;
+    }
+    .content{
+        font-size: 50%;
+    }
+    input{
+        font-size: 10vw;
+    }
+
+    button{
+        font-size: 10vw;
+    }
+    .card .content .detalhes .contatos{
+        font-size: 50%;
+    }
+
+
+
+}
+
+@media (min-width:300px){
+
+    section{
+        font-size: 50%;
+    }
+
+    h3{
+        font-size: 3.5rem;
+
+    }
+
+    .card .content .detalhes{
+        font-size: 50%;
+    }
+    .content{
+        font-size: 50%;
+    }
+    input{
+        font-size: 10vw;
+    }
+
+    button{
+        font-size: 10vw;
+    }
+    .card .content .detalhes .contatos{
+        font-size: 50%;
+    }
+
+    button{
+        font-size: 50%;
+    }
+
+    .acaobtn{
+        font-size: 50%;
+    }
+    .msg{
+        font-size: 50%;
+    }
+
+
+}
